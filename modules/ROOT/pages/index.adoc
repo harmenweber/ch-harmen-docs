@@ -8,12 +8,12 @@ Harmen Weber <harmen.weber@gmail.com>
 :rouge-style: github
 :icons: font
 :icon-set: far
-:autofit-option:
 :experimental:
 
 Below are some sections on different levels.
 Just to see what these different levels will look like.
 
+[[test-anchor]]
 == Level 2
 
 This is a second level section.
@@ -167,21 +167,6 @@ function log(message) { <1>
 <1> Declaration of the log function.
 <2> Logging the current datetime followed by the log message.
 
-There is autofit configuration that can either be set globally or on specific code blocks.
-It shrinks the code such that long code lines may still fit into the PDF.
-The code block below has this autofit enabled.
-Let's see how it looks.
-And to learn more about it, refer to
-https://asciidoctor.org/docs/asciidoctor-pdf/#autowidth-tables.
-
-.Long lined code block
-[source%autofit,javascript]
-----
-function log(message) {
-    console.log(getDateTime() + ": " + message); // And some rather long comment which should lead to a shrink.
-}
-----
-
 == Icons
 
 This is actually a feature documented at https://asciidoctor.org/docs/asciidoctor-pdf/#font-based-icons.
@@ -325,7 +310,8 @@ Just awesome.
 |===========================
 ID,FName,LName,Address,Phone
 
-1,Vasya,Pupkin,London,+123 2,X,Y,"A,B",45678
+1,Vasya,Pupkin,London,+123
+2,X,Y,"A,B",45678
 |===========================
 
 == Lists
@@ -372,20 +358,20 @@ The block form uses two colons (`::`), whereas the inline form only uses one (`:
 
 Here is an example block image:
 
-image::../images/sunset.jpg[]
+image::sunset.jpg[]
 
 And here is an example of the same block image but with an ID, a caption, a link, and size attributes.
 
 [#img-sunset]
 .A mountain sunset
 [link=https://docs.asciidoctor.org/asciidoc/latest/macros/_images/sunset.jpg]
-image::../images/sunset.jpg[Sunset,200,100]
+image::sunset.jpg[Sunset,200,100]
 
 And here are two examples of inline images.
 The second one has a title that will be displaye when hovering over the image (at least in HTML).
 
-Click image:../images/play.png[] to get the party started. +
-Click image:../images/pause.png[title="Pause"] when you need a break.
+Click image:play.png[] to get the party started. +
+Click image:pause.png[title="Pause"] when you need a break.
 
 == Horizontal Rule
 

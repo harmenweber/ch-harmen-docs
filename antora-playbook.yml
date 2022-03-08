@@ -1,9 +1,21 @@
 site:
     title: harmen.ch
     url: https://www.harmen.ch
+    start_page: ROOT::index.adoc
+    robots: allow
 content:
   sources:
     - url: ./
+asciidoc:
+  attributes:
+    sectnums: ''
+    sectanchors: ''
+    icons: 'font'
+    icon-set: 'far'
+    page-pagination: ''
+    experimental: ''
+    table-frame: 'none@'
+    table-grid: 'rows@'
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable

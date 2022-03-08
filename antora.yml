@@ -1,2 +1,5 @@
-name: harmen-ch
+name: ROOT
+title: harmen.ch
 version: ~
+nav:
+  - modules/ROOT/nav.adoc
