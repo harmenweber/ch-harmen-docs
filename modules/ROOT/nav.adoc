@@ -1,8 +1,6 @@
 * xref:index.adoc[]
 * xref:bla.adoc[]
-
-.Expandable sub-section
-* xref:index.adoc[Also pointing to the Home]
+** xref:blu.adoc[]
 
 ._Support_
 * https://support.project.com[Get Help]

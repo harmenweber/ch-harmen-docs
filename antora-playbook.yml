@@ -16,7 +16,13 @@ asciidoc:
     experimental: ''
     table-frame: 'none@'
     table-grid: 'rows@'
+antora:
+  extensions:
+    - require: '@antora/lunr-extension'
+      index_latest_only: true
 ui:
   bundle:
-    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+#    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    url: ~/repositories/ch-harmen-docs-ui/build/ui-bundle.zip
     snapshot: true
+  supplemental_files: ./node_modules/@antora/lunr-extension/supplemental_ui

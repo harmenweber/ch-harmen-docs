@@ -172,11 +172,11 @@ function log(message) { <1>
 This is actually a feature documented at https://asciidoctor.org/docs/asciidoctor-pdf/#font-based-icons.
 Take a look at it.
 
-Here is a fontawesome icon: icon:comment[].
+Here is a fontawesome icon: icon:comment[regular].
 
 And here is an icon from another icon set: icon:amazon[set=pf].
 
-You can even set the size of the icons: icon:smile[size=2em]
+You can even set the size of the icons: icon:smile[regular,lg,rotate=180]
 
 == Keyboard
 
@@ -252,27 +252,24 @@ Nice, the term is top aligned.
 You can also create them so they have markers.
 These markers are either unordered:
 
-[unordered]
-GPS:: Denotes that the position is a GPS position.
-CELLULAR:: Denotes that the position is a cellular position.
+* *GPS:* Denotes that the position is a GPS position.
+* *CELLULAR:* Denotes that the position is a cellular position.
 I'm adding here more text to it to see how the term gets verically aligned.
 Nice, the term is top aligned.
 
 Or ordered:
 
-[ordered]
-GPS:: Denotes that the position is a GPS position.
-CELLULAR:: Denotes that the position is a cellular position.
+1. *GPS:* Denotes that the position is a GPS position.
+2. *CELLULAR:* Denotes that the position is a cellular position.
 I'm adding here more text to it to see how the term gets verically aligned.
 Nice, the term is top aligned.
 
 By default, the subject (i.e., the term) is followed immediately by a colon (still in bold) and offset from the description by a space.
 You can replace the colon with another character (or sequence of characters) using the block attribute named `subject-stop`.
 
-[unordered,subject-stop=" >"]
-GPS:: Denotes that the position is a GPS position.
-CELLULAR:: Denotes that the position is a cellular position.
-I'm adding here more text to it to see how the term gets verically aligned.
+* *GPS >* Denotes that the position is a GPS position.
+* *CELLULAR >* Denotes that the position is a cellular position.
+I'm adding here more text to it to see how the term gets vertically aligned.
 Nice, the term is top aligned.
 
 A description list with marker uses a run-in layout by default.
@@ -280,9 +277,10 @@ In other words, the subject appears on the same line as the description, separat
 To make the subject appear above the description, like in a normal description list, add the stack role to the list.
 In this case, the stop character is only added if specified explicitly.
 
-[unordered.stack]
-GPS:: Denotes that the position is a GPS position.
-CELLULAR:: Denotes that the position is a cellular position.
+* *GPS* +
+Denotes that the position is a GPS position.
+* *CELLULAR* +
+Denotes that the position is a cellular position.
 I'm adding here more text to it to see how the term gets verically aligned.
 Nice, the term is top aligned.
 
