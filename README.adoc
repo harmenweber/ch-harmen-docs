@@ -1,0 +1,34 @@
+= README
+
+This is the https://antora.org[Antora] playbook project for all the docs that I publish at https://docs.harmen.ch.
+It uses a custom Antora UI bundle.
+That custom UI bundle can be found in the repository https://github.com/harmenweber/ch-harmen-docs-ui[ch-harmen-docs-ui].
+
+== Build
+
+[WARNING]
+====
+The build is not yet automated. The instructions below assume that the two repositories ch-harmen-docs-ui and ch-harmen-docs are available locally under `~/repositories/`.
+====
+
+To build the project, I first have to make sure that the custom UI bundle is built and available at `~/repositories/ch-harmen-docs-ui/build/ui-bundle.zip`.
+To do that, I execute the following commands:
+
+[source,bash]
+----
+cd ~/repositories/ch-harmen-docs-ui
+npm install
+gulp bundle
+----
+
+Once the custom UI bundle is available, I can execute antora within this repository.
+
+[source,bash]
+----
+cd ~/repositories/ch-harmen-docs-ui
+npx antora antora-playbook.yml
+----
+
+The generated website will then be available at `/repositories/ch-harmen-docs/build/site`.
+The generated website consists of static resources only.
+So, all I have to do from here, is to upload these static resources to https://docs.harmen.ch.
