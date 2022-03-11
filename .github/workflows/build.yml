@@ -30,7 +30,7 @@ jobs:
       uses: Reggionick/s3-deploy@v3.1.1
       with:
         # Directory to deploy
-        folder: build
+        folder: build/site
         # Name of AWS Bucket
         bucket: ${{ secrets.S3_BUCKET }}
         # The destination bucket region
