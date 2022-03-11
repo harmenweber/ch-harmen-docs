@@ -22,7 +22,6 @@ antora:
       index_latest_only: true
 ui:
   bundle:
-#    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
-    url: ~/repositories/ch-harmen-docs-ui/build/ui-bundle.zip
+    url: https://d18du1025xydad.cloudfront.net/ui-bundle.zip
     snapshot: true
   supplemental_files: ./node_modules/@antora/lunr-extension/supplemental_ui
