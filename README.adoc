@@ -1,34 +1,75 @@
 = README
 
 This is the https://antora.org[Antora] playbook project for all the docs that I publish at https://docs.harmen.ch.
-It uses a custom Antora UI bundle.
-That custom UI bundle can be found in the repository https://github.com/harmenweber/ch-harmen-docs-ui[ch-harmen-docs-ui].
 
-== Build
+== Publishing New Content
 
-[WARNING]
-====
-The build is not yet automated. The instructions below assume that the two repositories ch-harmen-docs-ui and ch-harmen-docs are available locally under `~/repositories/`.
-====
+To publish new content, simply push your changes in this repository to the origin master branch.
+There is a GitHub Actions workflow defined in `.github/workflow/build.yml`.
+That workflow will build the website, upload it to S3 and then invalidate the cache of the Cloudfront distribution.
 
-To build the project, I first have to make sure that the custom UI bundle is built and available at `~/repositories/ch-harmen-docs-ui/build/ui-bundle.zip`.
-To do that, I execute the following commands:
+In case you ever have to perform the build and deployment manually, here are the steps:
 
+1. Build the website
++
 [source,bash]
 ----
-cd ~/repositories/ch-harmen-docs-ui
-npm install
-gulp bundle
-----
-
-Once the custom UI bundle is available, I can execute antora within this repository.
-
-[source,bash]
-----
-cd ~/repositories/ch-harmen-docs-ui
+cd ~/repositories/ch-harmen-docs
+npm ci
 npx antora antora-playbook.yml
 ----
 
-The generated website will then be available at `/repositories/ch-harmen-docs/build/site`.
-The generated website consists of static resources only.
-So, all I have to do from here, is to upload these static resources to https://docs.harmen.ch.
+2. Sync the contents of `build/site` to `s3://ch-harmen-docs/`.
+3. Invalidate the cache for the Cloudfront distribution that points to `s3://ch-harmen-docs/`.
+
+== Rebasing the Custom Antora UI Bundle
+
+Keep in mind, that this repository only holds the documentation content.
+Documentation styling is defined in my custom Antora UI bundle.
+That custom Antora UI bundle can be found in the repository https://github.com/harmenweber/ch-harmen-docs-ui[ch-harmen-docs-ui].
+From time to time, you should maintain that custom Antora UI bundle.
+Meaning, you should rebase the custom bundle based on the original Antora UI bundle located at https://gitlab.com/antora/antora-ui-default[].
+You can do that in the terminal with the following command:
+
+[source,bash]
+----
+cd ~/repositories/ch-harmen-docs-ui
+git rebase -i upstream/master
+----
+
+Alternatively, you can do it in IntelliJ IDEA.
+Take your time when doing the merging, otherwise your custom settings or the updates from the Antora Default UI Bundle might get lost.
+When you are done with the rebase, push your changes to the origin master:
+
+[source,bash]
+----
+git push --force-with-lease
+----
+
+There is a GitHub Actions workflow defined in `.github/workflow/build.yml`.
+That workflow will build the custom Antora UI Bundle and deploy it, upload it to S3 and then invalidate the cache of the Cloudfront distribution.
+
+In case you ever have to perform the build and deployment manually, here are the steps:
+
+1. Build the website
++
+[source,bash]
+----
+cd ~/repositories/ch-harmen-docs-ui
+npm ci
+npx gulp bundle
+----
+
+2. Upload the `build/ui-bundle.zip` to `s3://ch-harmen-docs-ui/`.
+3. Invalidate the cache for the Cloudfront distribution that points to `s3://ch-harmen-docs-ui/`.
+
+== Further Customizing the Custom Antora UI Bundle
+
+If you perform further customizations to the custom Antora UI Bundle, you have to
+
+1. Build and deploy the custom Antora UI bundle.
+2. Build and deploy this repository again.
+
+The build and deploy of the custom Antora UI bundle happens, when you push your changes to the custom Antora UI bundle to its origin master.
+The build and deploy of this repository has to be triggered manually.
+Navigate to https://github.com/harmenweber/ch-harmen-docs/actions[] and trigger the build workflow manually.
