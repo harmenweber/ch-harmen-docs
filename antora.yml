@@ -1,5 +1,13 @@
-name: ROOT
+name: docs.harmen.ch
 title: docs.harmen.ch
 version: ~
+asciidoc:
+  attributes:
+    sectnums: ''
+    sectanchors: ''
+    autofit-option: ''
+    icons: font
+    icon-set: far
+    experimental: ''
 nav:
   - modules/ROOT/nav.adoc

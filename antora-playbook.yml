@@ -1,11 +1,15 @@
 site:
-    title: harmen.ch
-    url: https://www.harmen.ch
-    start_page: ROOT::index.adoc
+    title: docs.harmen.ch
+    url: https://docs.harmen.ch
+    start_page: docs.harmen.ch:ROOT:index.adoc
     robots: allow
 content:
   sources:
     - url: ./
+#    - url: /Users/harmen/repositories/ch-harmen-echo
+#      start_path: docs
+    - url: https://github.com/harmenweber/asciidoc-templates
+      start_path: docs
 asciidoc:
   attributes:
     sectnums: ''
@@ -25,3 +29,7 @@ ui:
     url: https://d18du1025xydad.cloudfront.net/ui-bundle.zip
     snapshot: true
   supplemental_files: ./node_modules/@antora/lunr-extension/supplemental_ui
+output:
+  clean: true
+runtime:
+  fetch: true
