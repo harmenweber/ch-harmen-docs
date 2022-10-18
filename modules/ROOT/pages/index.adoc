@@ -30,4 +30,40 @@ Here we go:
 
 asciidoc-templates::
 include::asciidoc-templates:ROOT:partial$repository-description.adoc[]
++
 Here is the xref:asciidoc-templates:ROOT:index.adoc[documentation].
+
+shell-script-template::
+The shell-script-template repository contains resources that come in handy when writing shell scripts.
+The main piece is a shell script template containing the usual boilerplate like:
++
+--
+* identifying script name and home folder
+* options reading and handling
+* usage printing
+* and more.
+
+Further, the repository contains some example shell scripts and some handy functions.
+
+The repository is not yet public.
+It still requires some polishing.
+Stay tuned.
+--
+
+rat::
+rat is a prototype of some realtime asset tracking application that I implemented together with my colleague Roman Mäder.
+The prototype has an Angular frontend and a NestJS backend.
+The backend accepts position data from IoT devices, stores it and publishes it to subscribed clients (using GraphQL subscriptions).
+Subscribed clients update the position of the IoT devices on the map as new position data gets published.
+As a result, users get the position of their IoT devices displayed and updated in near-realtime and without having to refresh/reload their browser or mobile app.
++
+The repository is private and there is no public documentation.
+However, the prototype is deployed and can be seen at https://rat-web-dev.harmen.ch[].
+Currently, six simulated IoT devices are running back and forth between the cities of Baar and Zurich.
+
+echo::
+This is a project that I plan to realize.
+Mainly to get my hands dirty on Spring Boot 3 that is about to get released towards the end of year 2022.
+The functionality of the application will be similar to what https://webhook.site[] is doing.
+The application will be reactive and native.
+It will expose a REST and a GraphQL API.
