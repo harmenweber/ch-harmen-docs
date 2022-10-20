@@ -59,7 +59,7 @@ As a result, users get the position of their IoT devices displayed and updated i
 +
 The repository is private and there is no public documentation.
 However, the prototype is deployed and can be seen at https://rat-web-dev.harmen.ch[].
-Currently, six simulated IoT devices are running back and forth between the cities of Baar and Zurich.
+Currently, six simulated IoT devices are running back and forth between the cities Baar and Zurich.
 
 echo::
 This is a project that I plan to realize.
