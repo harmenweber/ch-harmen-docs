@@ -10,6 +10,8 @@ content:
 #      start_path: docs
     - url: https://github.com/harmenweber/asciidoc-templates
       start_path: docs
+    - url: https://github.com/harmenweber/echo
+      start_path: docs
 asciidoc:
   attributes:
     sectnums: ''
