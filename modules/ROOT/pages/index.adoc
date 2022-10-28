@@ -30,7 +30,6 @@ Here we go:
 
 asciidoc-templates::
 include::asciidoc-templates:ROOT:partial$repository-description.adoc[]
-+
 Here is the xref:asciidoc-templates:ROOT:index.adoc[documentation].
 
 Echo::
@@ -53,8 +52,8 @@ The main piece is a shell script template containing the usual boilerplate like:
 
 Further, the repository contains some example shell scripts and some handy functions.
 
-The repository is not yet public.
-It still requires some polishing.
+The repository is not public yet.
+It still requires polishing.
 Stay tuned.
 --
 
