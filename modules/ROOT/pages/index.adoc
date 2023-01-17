@@ -33,10 +33,11 @@ include::asciidoc-templates:ROOT:partial$repository-description.adoc[]
 Here is the xref:asciidoc-templates:ROOT:index.adoc[documentation].
 
 Echo::
-This is a project that I plan to realize.
-Mainly to get my hands dirty on Spring Boot 3 that is about to get released towards the end of year 2022.
+I started this project towards the end of year 2022.
+The end of 2022 was busy, and in January 2023, I started a new job.
+Therefore, the project progresses is very slowly.
 The functionality of the application will be similar to what https://webhook.site[] is doing.
-The application will be reactive and native.
+The application will be reactive.
 It will expose a REST and a GraphQL API.
 Here is some xref:echo:ROOT:index.adoc[documentation].
 
