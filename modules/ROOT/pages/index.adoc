@@ -35,11 +35,18 @@ Here is the xref:asciidoc-templates:ROOT:index.adoc[documentation].
 Echo::
 I started this project towards the end of year 2022.
 The end of 2022 was busy, and in January 2023, I started a new job.
-Therefore, the project progresses is very slowly.
+Therefore, the project [.line-through]#progresses very slowly# doesn't progress at all.
 The functionality of the application will be similar to what https://webhook.site[] is doing.
-The application will be reactive.
-It will expose a REST and a GraphQL API.
-Here is some xref:echo:ROOT:index.adoc[documentation].
+I planned it to be a reactive Spring Boot application with a REST and a GraphQL API.
+If I ever continue, I will probably rewrite everything in Kotlin and use Ktor or Vertx.
+Anyway, here is some xref:echo:ROOT:index.adoc[documentation].
+
+transpose-gherkin-datatable::
+An evening of boredom and the urge to finally write something in Kotlin led to this project.
+It's a command line tool to transpose gherkin data tables.
+Its functionality is completely secondary.
+It's main purpose was to act as a playground for:
+https://kotlinlang.org[Kotlin], https://ajalt.github.io/clikt/[Clikt], https://ajalt.github.io/mordant/[Mordant] and https://mooltiverse.github.io/nyx/[Nyx]. The git repository is https://github.com/harmenweber/transpose-gherkin-datatable[here].
 
 shell-script-template::
 The shell-script-template repository contains resources that come in handy when writing shell scripts.
