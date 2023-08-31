@@ -48,6 +48,11 @@ Its functionality is completely secondary.
 It's main purpose was to act as a playground for:
 https://kotlinlang.org[Kotlin], https://ajalt.github.io/clikt/[Clikt], https://ajalt.github.io/mordant/[Mordant] and https://mooltiverse.github.io/nyx/[Nyx]. The git repository is https://github.com/harmenweber/transpose-gherkin-datatable[here].
 
+roll::
+A simple command line tool to roll dice.
+For example, execute `roll 3d6 2d8` to roll three six sided dice and two eight sided dice.
+The git repository is https://github.com/harmenweber/roll[here].
+
 shell-script-template::
 The shell-script-template repository contains resources that come in handy when writing shell scripts.
 The main piece is a shell script template containing the usual boilerplate like:
