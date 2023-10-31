@@ -77,6 +77,4 @@ The backend accepts position data from IoT devices, stores it and publishes it t
 Subscribed clients update the position of the IoT devices on the map as new position data gets published.
 As a result, users get the position of their IoT devices displayed and updated in near-realtime and without having to refresh/reload their browser or mobile app.
 +
-The repository is private and there is no public documentation.
-However, the prototype is deployed and can be seen at https://rat-web-dev.harmen.ch[].
-Currently, six simulated IoT devices are running back and forth between the cities Baar and Zurich.
+I'm afraid, the repository is private and there is no public documentation.
